@@ -25,7 +25,7 @@ jobs:
      - name: docker push
        run: docker push ${{ secrets.DOCKER_HUB_USER }}/frontend  
 
-build:
+ build:
      runs-on: ubuntu-latest
      defaults:
       run:

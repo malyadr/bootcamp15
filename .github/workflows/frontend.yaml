@@ -7,8 +7,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      working-directory: ./web-ui
+    defaults:
+      run:
+      # mockdir folder working directory.
+        working-directory: web-ui
 
     steps:
      - name: Login to Docker Hub

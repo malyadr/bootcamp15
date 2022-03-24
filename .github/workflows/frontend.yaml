@@ -10,7 +10,7 @@ jobs:
     defaults:
       run:
       # mockdir folder working directory.
-        working-directory: web-ui
+        working-directory: services/job-management-services
 
     steps:
      - name: Login to Docker Hub

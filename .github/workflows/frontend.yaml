@@ -16,7 +16,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
          
      - name: build the docker image 
-       run: docker build . --file Dockerfile --tag malyadr/frontend
+       run: docker build . /home/runner/work/bootcamp15/bootcamp15/web-ui/Dockerfile --tag malyadr/frontend
 
      - name: docker push
        run: docker push ${{ secrets.DOCKER_HUB_USER }}/frontend  

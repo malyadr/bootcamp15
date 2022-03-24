@@ -10,7 +10,7 @@ jobs:
     defaults:
       run:
       # mockdir folder working directory.
-        working-directory: bootcamp15/web-ui
+        working-directory: web-ui
 
     steps:
      - name: Login to Docker Hub
@@ -20,7 +20,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
          
      - name: build the docker image 
-       run: docker build . --tag malyadr/frontend
+       run: docker build . -t  malyadr/frontend
 
      - name: docker push
        run: docker push ${{ secrets.DOCKER_HUB_USER }}/frontend  

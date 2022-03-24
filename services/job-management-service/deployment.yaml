@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: springboot
+  name: database
   labels:
     role: pg
     env: demo
 spec:
-  replicas: 4
+  replicas: 1
   selector:
     matchLabels:
       role: pg

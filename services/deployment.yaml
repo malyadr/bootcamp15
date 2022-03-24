@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: springboot1
+  name: springback
   labels:
-    role: api
+    role: pg
     env: demo
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      role: api
+      role: pg
   template:
     metadata:
       labels:
-        role: api
+        role: pg
     spec:
       containers:
-      - name: api
+      - name: pg
         image: malyadr/greenboot:1
         env:   
            - name: SPRING_DATASOURCE_URL
-             value: jdbc:postgresql://db:5432/jobs
+             value: jdbc:postgresql://database:5432/jobs
            - name: SPRING_DATASOURCE_USERNAME
              value: jobs_usr    
            - name: SPRING_DATASOURCE_PASSWORD

@@ -30,9 +30,4 @@ backend:
       run: docker build . --tag malyadr/backend
 
     - name: docker push 
-      run: docker push ${{ secrets.DOCKER_HUB_USER }}/backend     
-
-
-
-
-
+      run: docker push ${{ secrets.DOCKER_HUB_USER }}/backend  

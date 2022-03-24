@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: bootcamp
+  name: springback
   labels:
-    role: api
+    role: pg
     env: demo
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
    - protocol: TCP
      port: 8080
   selector:
-    role: api
+    role: pg

@@ -19,7 +19,7 @@ jobs:
        uses: docker/build-push-action@v2
        with:
          context: .
-         file: ./dockerfile
+         file: ./web-ui/dockerfile
          push: true
          tag: ${{ secrets.DOCKERHUB_USERNAME }}/frontend:latest
  

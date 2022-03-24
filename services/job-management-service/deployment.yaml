@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot
+  labels:
+    role: pg
+    env: demo
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      role: pg
+  template:
+    metadata:
+      labels:
+        role: pg
+    spec:
+      containers:
+      - name: pg
+        image: dhanrajnath/postgres:latest
+        env:
+        - name: POSTGRES_USER
+          value: jobs_usr
+        - name: POSTGRES_PASSWORD
+          value: us3rs
+        - name:  POSTGRES_DB
+          value: jobs
+        ports:
+        - containerPort: 5432

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: bootcamp
+    labels: 
+      role: frontend
+      env: demo 
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+         role: frontend
+  template:
+     metadata: 
+        labels:
+          role: frontend
+     spec:
+        containers:
+         - name: frontend
+           image: malyadr/boot:1
+           ports:
+            - containerPort: 3000     

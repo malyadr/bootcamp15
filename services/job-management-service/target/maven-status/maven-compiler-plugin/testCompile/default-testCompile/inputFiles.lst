@@ -1,0 +1,9 @@
+/home/malyadm/bootcamp/devops-bootcamp-jan22/BC15-green-commute/services/job-management-service/src/test/java/com/greencommute/jobmanagementservice/persistence/details/JobRepositoryTest.java
+/home/malyadm/bootcamp/devops-bootcamp-jan22/BC15-green-commute/services/job-management-service/src/test/java/com/greencommute/jobmanagementservice/persistence/details/TestPostgresConfiguration.java
+/home/malyadm/bootcamp/devops-bootcamp-jan22/BC15-green-commute/services/job-management-service/src/test/java/com/greencommute/jobmanagementservice/persistence/details/TestApplicationConfiguration.java
+/home/malyadm/bootcamp/devops-bootcamp-jan22/BC15-green-commute/services/job-management-service/src/test/java/com/greencommute/jobmanagementservice/JobManagementServiceApplicationTests.java
+/home/malyadm/bootcamp/devops-bootcamp-jan22/BC15-green-commute/services/job-management-service/src/test/java/com/greencommute/jobmanagementservice/controller/UserJobMappingControllerTest.java
+/home/malyadm/bootcamp/devops-bootcamp-jan22/BC15-green-commute/services/job-management-service/src/test/java/com/greencommute/jobmanagementservice/persistence/details/UserJobMappingRepositoryTest.java
+/home/malyadm/bootcamp/devops-bootcamp-jan22/BC15-green-commute/services/job-management-service/src/test/java/com/greencommute/jobmanagementservice/controller/JobControllerTest.java
+/home/malyadm/bootcamp/devops-bootcamp-jan22/BC15-green-commute/services/job-management-service/src/test/java/com/greencommute/jobmanagementservice/service/details/UserJobMappingServiceTest.java
+/home/malyadm/bootcamp/devops-bootcamp-jan22/BC15-green-commute/services/job-management-service/src/test/java/com/greencommute/jobmanagementservice/service/details/JobServiceTest.java

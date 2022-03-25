@@ -3,8 +3,8 @@ name: frontend
 on:
   push:
     branches: [ master ]
-build:
- jobs:
+
+jobs:
   build:
     runs-on: ubuntu-latest
     defaults:

@@ -1,0 +1,12 @@
+--- 
+apiVersion: v2
+appVersion: "1.16.0"
+description: "Basic nginx website"
+name: nginx-chart
+type: application
+version: "0.1.0"
+dependencies: 
+   - name: redis
+     version: 12.7.x
+     repository: https://charts.bitnami.com/bitnami
+     

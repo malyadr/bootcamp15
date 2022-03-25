@@ -17,7 +17,7 @@ jobs:
          
      -
        name: build the docker image 
-       uses: docker build . -t  malyadr/frontend
+       run: docker build . -t  malyadr/frontend
        with: 
         context: .
         file: ./Dockerfile

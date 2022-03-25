@@ -24,7 +24,9 @@ jobs:
 
      - name: docker push
        run: docker push ${{ secrets.DOCKER_HUB_USER }}/frontend  
-build:
+backend:
+  jobs:       
+    build:
      runs-on: ubuntu-latest
      defaults:
       run:
@@ -43,6 +45,23 @@ build:
 
       - name: docker push
         run: docker push ${{ secrets.DOCKER_HUB_USER }}/frontend  
+deploy: 
+   name: deploy
+   runs-on: ubuntu-latest
+
+   steps:
+     - name: checkout
+       uses: actions/checkout@v2
+
+     - name: configure AWS credentials
+       uses: aws-actions/configure-aws-credentials
+       with: 
+         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}  
+         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+         aws-region: ap-south-1
+     - name: connect to EKS cluster
+       run: aws eks --region $EKS_REGION update-kubeconfig --name $EKS_CLUSTER    
+              
 
    
       

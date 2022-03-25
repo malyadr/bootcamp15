@@ -8,20 +8,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     - name: Login to Docker Hub
+     - 
+       name: Login to Docker Hub
        uses: docker/login-action@v1
        with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
          
-     - name: build the docker image 
-       run: docker build . -t  malyadr/frontend
+     -
+       name: build the docker image 
+       uses: docker build . -t  malyadr/frontend
        with: 
         context: .
         file: ./Dockerfile
         push: true
 
-     - name: docker push
+     - 
+       name: docker push
        run: docker push ${{ secrets.DOCKER_HUB_USER }}/frontend  
   
 

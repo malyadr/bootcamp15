@@ -16,7 +16,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
          
      - name: build the docker image 
-       run: docker build . -t  malyadr/frontend
+       run: docker build -t  malyadr/frontend .
 
      - name: docker push
        run: docker push ${{ secrets.DOCKER_HUB_USER }}/frontend                 

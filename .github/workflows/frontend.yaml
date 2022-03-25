@@ -24,7 +24,7 @@ jobs:
 
      - name: docker push
        run: docker push ${{ secrets.DOCKER_HUB_USER }}/frontend  
-backend:
+
   jobs:       
     build:
      runs-on: ubuntu-latest
@@ -45,9 +45,10 @@ backend:
 
       - name: docker push
         run: docker push ${{ secrets.DOCKER_HUB_USER }}/frontend  
-deploy: 
-   name: deploy
-   runs-on: ubuntu-latest
+
+    jobs:
+     deploy:
+       runs-on: ubuntu-latest
 
    steps:
      - name: checkout

@@ -23,9 +23,7 @@ build:
        run: docker build . -t  malyadr/frontend
 
      - name: docker push
-       run: docker push ${{ secrets.DOCKER_HUB_USER }}/frontend  
-
-  jobs:       
+       run: docker push ${{ secrets.DOCKER_HUB_USER }}/frontend               
     build:
      runs-on: ubuntu-latest
      defaults:

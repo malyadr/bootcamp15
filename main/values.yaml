@@ -16,7 +16,7 @@ secert1:
     Postgres_passwd: us3rs
     Postgres_db : jobs
 secert2: 
-    jobs_url: jdbc:postgresql://green-db:5432/jobs
+    jobs_url: jdbc:postgresql://greencommit-db:5432/jobs
     jobs_usr: jobs_usr
     jobs_passwd : us3rs
     jobs_update: update   

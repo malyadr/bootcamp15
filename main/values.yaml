@@ -28,5 +28,5 @@ service2:
   type: ClusterIP
   port: 5432
 service3:
-  type: LoadBalancer
+  type: ClusterIP
   port: 8080

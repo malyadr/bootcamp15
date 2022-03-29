@@ -17,10 +17,10 @@ spec:
             name: {{ .Release.Name }}-frontend
             port:
               number: 3000
-      - path: /api/
-        pathType: Prefix
-        backend:
-          service:
-            name: {{ .Release.Name }}-bc
-            port:
-              number: 8080
+      # - path: /api/
+      #   pathType: Prefix
+      #   backend:
+      #     service:
+      #       name: {{ .Release.Name }}-bc
+      #       port:
+      #         number: 8080

@@ -19,7 +19,7 @@ spec:
         image: "{{ .Values.image1.repository }}:{{ .Values.image1.tag }}"
         env: 
          - name: BACKEND_BASE_URL
-           value: a8bb53eb71e154e808e8c5b42f0bb6a6-704007710.ap-south-1.elb.amazonaws.com:8080
+           value: http://a090bdf559bcc4f4798bc3d09b9e2477-1838320143.ap-south-1.elb.amazonaws.com:8080
         value: 
         ports:
           - name: http

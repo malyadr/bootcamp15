@@ -31,7 +31,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-db
+  name: {{ .Release.Name }}-dd
   labels:
     app: pg
 spec:

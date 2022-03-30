@@ -7,7 +7,7 @@ metadata:
 spec:
   ingressClassName: nginx 
   rules:
-  - host: a43d5a90f9a094b7d966ead0de7fb2cf-161477199.ap-south-1.elb.amazonaws.com 
+  - host: a6a602266295f40aaae2b00ec4dff750-936901992.ap-south-1.elb.amazonaws.com 
     http:
       paths:
       - path: /
@@ -17,10 +17,10 @@ spec:
             name: {{ .Release.Name }}-frontend
             port:
               number: 3000
-      - path: /api/
-        pathType: Prefix
-        backend:
-          service:
-            name: {{ .Release.Name }}-bc
-            port:
-              number: 8080
+      # - path: /api/
+      #   pathType: Prefix
+      #   backend:
+      #     service:
+      #       name: {{ .Release.Name }}-bc
+      #       port:
+      #         number: 8080

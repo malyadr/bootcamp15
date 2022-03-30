@@ -3,15 +3,7 @@ on:
   push:
     branches:
       - master
-env:
-  DOCKER_ID: ${{ secrets.DOCKERHUB_USERNAME }}
-  DOCKER_PW: ${{ secrets.DOCKERHUB_TOKEN }}
-  access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  account_id: ${{ secrets.AWS_ACCOUNT_ID }}
-  EKS_CLUSTER: ${{ secrets.EKS_CLUSTER }}
-  EKS_REGION: ${{ secrets.EKS_REGION }}
-  RELEASE_NAME:
+
 jobs:
   backend:
     name: BUILD 
@@ -36,9 +28,9 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - uses: actions/checkout@v2
     - name: build image 
-      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USERNAME }}/backend:latest
+      run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USERNAME }}/backend:2
     - name: docker push
-      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/backend:latest
+      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/backend:2
   
  
   frontend:
@@ -77,9 +69,9 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - uses: actions/checkout@v2
       - name: build image 
-        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USERNAME }}/frontend:latest
+        run: docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USERNAME }}/frontend:3
       - name: docker push
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/frontend:latest
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/frontend:3
   
   deploy:
     runs-on: ubuntu-latest

@@ -3,7 +3,11 @@ on:
   push:
     branches:
       - master
-
+env:
+  account_id: ${{ secrets.AWS_ACCOUNT_ID }}
+  EKS_CLUSTER: ${{ secrets.EKS_CLUSTER }}
+  EKS_REGION: ${{ secrets.EKS_REGION }}
+ 
 jobs:
   backend:
     name: BUILD 
